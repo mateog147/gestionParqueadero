@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen Pago</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <main class="main">
+        <div class="menu-container">
+            <form class="menu">
+                <label for="placa">PLACA: </label>
+                <input type="text" name="placa" id="placa" disabled value="{{plc}}" class="input"/>
+
+                <label for="ingreso">HORA DE ENTRADA: </label>
+                <input type="text" name="ingreso" value="{{horaEntrada}}" disabled class="input">
+
+                <label for="salida">HORA DE SALIDA: </label>
+                <input type="text" name="salida" value="{{horaSalida}}" disabled class="input">
+
+                <label for="placa">SALDO: </label>
+                <input type="text" name="saldo" disabled value="{{pago}}" class="input"/>
+
+                <button class="button" type="submit" formaction="/pago/" formmethod="post">REGISTRAR PAGO</button>
+            </form>
+            <a href="/home/">Regresar</a>
+        </div>
+    </main>
+</body>
+</html>
