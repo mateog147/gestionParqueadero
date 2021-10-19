@@ -1,0 +1,26 @@
+*PRUEBA PRÁCTICA*
+
+Este es un ejemplo de una aplicación para manejo de un pequeño parqueadero 
+el cual ofrece el servicio por horas. El parqueadero tiene capacidad para 30 vehículos. 
+
+*REQUERMIENTOS TECNICOS*
+Este aplicativo funciona bajo el modelo cliente servidor. 
+
+El backend de este está hecho usando la librería Flask de Python.
+por lo cual se requiere tener Python y esta librería instalados.
+
+*FUNCIONAMIENTO*
+
+Para iniciar el aplicativo de doble clic sobre el archivo servidor.py, esto iniciara el servidor en su ip local en el 
+puerto 8080. 
+
+Desde el navegador vaya a la ruta: '127.0.0.1:8080' esta ruta lo llevara al menú de inicio. 
+
+En el menú de inicio tiene 3 opciones:
+	1. Registrar un nuevo ingreso.
+	2. Consultar los datos para un egreso.
+	3. Ver la cantidad de celdas disponibles.
+Cuando se consulta un placa si esta esta abierta dentro de los registros de la plataforma se calculará la tarifa a pagar,
+ cobrando 100 pesos por minuto o fracción transcurrido.  
+
+ 
