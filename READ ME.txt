@@ -11,7 +11,7 @@ por lo cual se requiere tener Python y esta librería instalados.
 
 *FUNCIONAMIENTO*
 
-Para iniciar el aplicativo de doble clic sobre el archivo servidor.py, esto iniciara el servidor en su ip local en el 
+Para iniciar el aplicativo de doble clic sobre el archivo app.py, esto iniciara el servidor en su ip local en el 
 puerto 8080. 
 
 Desde el navegador vaya a la ruta: '127.0.0.1:8080' esta ruta lo llevara al menú de inicio. 
