@@ -5,16 +5,16 @@ from datetime import datetime
 import math
 import os
 
-server = Flask('__name__')
+app = Flask('__name__')
 
-@server.route('/')
-@server.route('/home/')
-@server.route('/index/')
+@app.route('/')
+@app.route('/home/')
+@app.route('/index/')
 def index():
     return render_template('index.html')
 
-@server.route('/ingreso')
-@server.route('/ingreso/',methods=['GET', 'POST'])
+@app.route('/ingreso')
+@app.route('/ingreso/',methods=['GET', 'POST'])
 def ingresar():
     if request.method=='GET':
         return render_template('ingreso.html')
@@ -64,8 +64,8 @@ def ingresar():
         else:
             return render_template('error.html',mensaje=msg)
 
-@server.route('/egreso')
-@server.route('/egreso/',methods=['GET', 'POST'])
+@app.route('/egreso')
+@app.route('/egreso/',methods=['GET', 'POST'])
 def retirar():
     if request.method=='GET':
         return render_template('egreso.html')
@@ -108,8 +108,8 @@ def retirar():
         else:
             return render_template('error.html',mensaje=msg)
 
-@server.route('/pago')
-@server.route('/pago/',methods=['GET', 'POST'])
+@app.route('/pago')
+@app.route('/pago/',methods=['GET', 'POST'])
 def pagar():
     if request.method=='GET':
         return render_template('pago.html',plc=session['placa'],pago=session['saldo'],horaEntrada=session['ingreso'],horaSalida=session['salida'])
@@ -149,8 +149,8 @@ def pagar():
             return redirect('/home/')
         else:
             return render_template('error.html',mensaje=msg)
-@server.route('/estado')
-@server.route('/estado/')
+@app.route('/estado')
+@app.route('/estado/')
 def estado():
     try:
         # Valido los datos 
@@ -171,11 +171,11 @@ def estado():
         return render_template('estado.html',disponible=dis)
     else:
         return render_template('error.html')
-@server.route('/error')
-@server.route('/error/')
+@app.route('/error')
+@app.route('/error/')
 def error():
     return render_template('error.html',mensaje='ERROR')
 
 if __name__=='__main__':
-    server.secret_key=os.urandom(12)
-    server.run(debug=True,port=8080)
+    app.secret_key=os.urandom(12)
+    app.run(debug=True,port=80)
