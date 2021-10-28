@@ -21,6 +21,8 @@ En el menú de inicio tiene 3 opciones:
 	2. Consultar los datos para un egreso.
 	3. Ver la cantidad de celdas disponibles.
 Cuando se consulta un placa si esta esta abierta dentro de los registros de la plataforma se calculará la tarifa a pagar,
- cobrando 100 pesos por minuto o fracción transcurrido.  
+ cobrando 100 pesos por minuto o fracción transcurrido.
+
+para consultas contacte mateog147@hotmail.com  
 
  
